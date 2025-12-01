@@ -35,7 +35,7 @@ C. Sample Output (Alert)
 ========================================
 
 
-
+## Analysis of simulations for different time windows and alert threshold
 
 | Time Windows (s) | Alert Threshold -3 | Alert Threshold -10 |
 |:----------------:|:------------------:|:-------------------:|
@@ -44,3 +44,5 @@ C. Sample Output (Alert)
 | 60               | 28                 | 20                  |
 | 120              | 42                 | 24                  |
 | 180              | 54                 | 30                  |
+
+From the data above, it can be seen that for alert threshold of 3, 15s and 30s window work but for threshold of 10, it doesn't show any alerts. So, it can be deduced that, these smaller time frames are not good for all systems. Same can be said for higher end of the window (120s/180s) as, for lower alert threshold, these show a lot of alerts that may hamper the monitoring. As a result, the **60s** threshold is a better approach for most of the systems.
