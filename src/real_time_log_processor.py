@@ -11,9 +11,9 @@ KEYWORDS = ["ERROR", "WARNING"]
 
 # [ALGORITHM CONFIG]
 # We look for density, not just counts.
-# Example: "More than 3 errors in 10 seconds"
-WINDOW_SIZE_SECONDS = 60
-ALERT_THRESHOLD = 3 
+# Example: "More than 3 errors in 15 seconds"
+WINDOW_SIZE_SECONDS = 15
+ALERT_THRESHOLD = 10
 
 # --- Part 1: Robust File Tailing (Async I/O) ---
 async def tail_file(filepath: Path) -> AsyncGenerator[str, None]:
